@@ -1,8 +1,11 @@
 #!/bin/bash
 
 # input video => output H.264 high profile 4.1
+#
+# Override the Constant Rate Factor by setting x264_crf before calling.
+#
 get_video_flags() {
-    echo libx264 -crf 23 -profile:v high -preset medium -level 4.1
+    echo libx264 -crf ${x264_crf:-23} -profile:v high -preset medium -level 4.1
 }
 
 get_stereo_audio_flags() { # input / output => stereo
