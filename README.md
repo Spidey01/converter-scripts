@@ -43,7 +43,7 @@ Outputs are H.264 videos with AAC(-LC) audios. One reason the MP4 container was 
 H.264 is the most widely compatible video format that is also available on Chromecast. Just about everything will play some kind of H.264 video now're days, even a toaster oven. Chromecast also gives us the choice of AAC or Vorbis audios. AAC was chosen for greater compatibility.
 
 
-Experiments have shown Chromecast can only handle H.264 high profile 1.1 up to 5~6 Mbit/s. Video is transcoded using libx264 and a Constant Rate Factor (--crf) of 23. This usually generates acceptible output in a low enough bitrate.
+Experiments have shown Chromecast can only handle H.264 high profile 1.1 up to about 5~6 Mbit/s before it becomes unwatchable. Even at about 4 Mbit/s it is still possible to have occasional "Freezes" in playback, presumably because the quality for that scene is higher than the average. Video is transcoded using libx264 and a Constant Rate Factor (--crf) of 23 is the default. This usually generates acceptible output in a low enough bitrate.
 
 Audios generally take one of the following forms based on the input:
 
